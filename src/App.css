@@ -1,0 +1,25 @@
+.App{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+#search{
+    border: none;
+    font-size: 30px;
+    padding-left: 10px;
+    text-align: center;
+    background-color: rgb(80, 255, 217);
+    border-radius: 25px;
+    box-shadow: 2px 2px 3px black;
+}
+.btn-full{
+    background-color: rgb(252, 101, 101);
+    font-size: 20px;
+    border-radius: 5px;
+   
+}
+.btn-full:hover{
+    background-color: rgb(252, 54, 54);
+}
