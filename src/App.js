@@ -10,7 +10,7 @@ function App() {
   const[country,setCountry]=useState('');
   const data= async()=>{
     const apiRes = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=6930891197bfc4266ba6b989393f57be`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=6930891197bfc4266ba6b989393f57be`
       );
       const resJSON= await apiRes.json();
       return resJSON;
@@ -40,7 +40,7 @@ function App() {
      <input 
      id='search'
      value={city} onChange={(e)=>setCity(e.target.value)}
-     />
+     /><br></br>
      <button class='btn btn-full' onClick={e=>handleSearch(e )}>search</button>
    </from>
     </div>
