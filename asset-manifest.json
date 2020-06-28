@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/WeatherCard/static/css/main.6cd80f56.chunk.css",
-    "main.js": "/WeatherCard/static/js/main.440b7dae.chunk.js",
-    "main.js.map": "/WeatherCard/static/js/main.440b7dae.chunk.js.map",
-    "runtime-main.js": "/WeatherCard/static/js/runtime-main.8ada04da.js",
-    "runtime-main.js.map": "/WeatherCard/static/js/runtime-main.8ada04da.js.map",
-    "static/js/2.252bf174.chunk.js": "/WeatherCard/static/js/2.252bf174.chunk.js",
-    "static/js/2.252bf174.chunk.js.map": "/WeatherCard/static/js/2.252bf174.chunk.js.map",
-    "index.html": "/WeatherCard/index.html",
-    "precache-manifest.a7a08a9efd695d0b74e0b93cfbbb508b.js": "/WeatherCard/precache-manifest.a7a08a9efd695d0b74e0b93cfbbb508b.js",
-    "service-worker.js": "/WeatherCard/service-worker.js",
-    "static/css/main.6cd80f56.chunk.css.map": "/WeatherCard/static/css/main.6cd80f56.chunk.css.map",
-    "static/js/2.252bf174.chunk.js.LICENSE.txt": "/WeatherCard/static/js/2.252bf174.chunk.js.LICENSE.txt"
+    "main.css": "/myweathercard/static/css/main.6fd70063.chunk.css",
+    "main.js": "/myweathercard/static/js/main.930b6b75.chunk.js",
+    "main.js.map": "/myweathercard/static/js/main.930b6b75.chunk.js.map",
+    "runtime-main.js": "/myweathercard/static/js/runtime-main.576fd4d9.js",
+    "runtime-main.js.map": "/myweathercard/static/js/runtime-main.576fd4d9.js.map",
+    "static/js/2.252bf174.chunk.js": "/myweathercard/static/js/2.252bf174.chunk.js",
+    "static/js/2.252bf174.chunk.js.map": "/myweathercard/static/js/2.252bf174.chunk.js.map",
+    "index.html": "/myweathercard/index.html",
+    "precache-manifest.593b85b75fec1e8b3619b568d2704888.js": "/myweathercard/precache-manifest.593b85b75fec1e8b3619b568d2704888.js",
+    "service-worker.js": "/myweathercard/service-worker.js",
+    "static/css/main.6fd70063.chunk.css.map": "/myweathercard/static/css/main.6fd70063.chunk.css.map",
+    "static/js/2.252bf174.chunk.js.LICENSE.txt": "/myweathercard/static/js/2.252bf174.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ada04da.js",
+    "static/js/runtime-main.576fd4d9.js",
     "static/js/2.252bf174.chunk.js",
-    "static/css/main.6cd80f56.chunk.css",
-    "static/js/main.440b7dae.chunk.js"
+    "static/css/main.6fd70063.chunk.css",
+    "static/js/main.930b6b75.chunk.js"
   ]
 }
