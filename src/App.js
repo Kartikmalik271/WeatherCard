@@ -1,50 +1,76 @@
-import React,{useEffect , useState} from 'react';
-
-import WeatherCard from './components/WeatherCard';
+import {useState,useEffect} from 'react'
 import './App.css';
+import Main from './components/main';
 
 function App() {
-  const[city,setCity]=useState('Delhi');
-  const[temp,setTemp]=useState('');
-  const[condition,setCondition]=useState('');
-  const[country,setCountry]=useState('');
-  const data= async()=>{
-    const apiRes = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=6930891197bfc4266ba6b989393f57be`
-      );
-      const resJSON= await apiRes.json();
-      return resJSON;
-  };
+  //declaration of states
+  const [city,setCity]=useState("mohali")
+  const [tmp,setTmp]=useState([])
+
   
-  const handleSearch=(e)=>{
+  const [bkcolor,setBkcolor]=useState("linear-gradient(130deg,#ffffff,#ffffff)")
+
+  //fetching data form api
+  const fetchData = () => {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=6930891197bfc4266ba6b989393f57be`)
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setTmp(data)
+        console.log(data)
+        if (data.list[0].main.temp>40){
+          setBkcolor("linear-gradient(130deg,#ed7117, #ed7014)")
+        }
+        else if (data.list[0].main.temp>25){
+          setBkcolor("linear-gradient(130deg,#ff781f,#ffba49)")
+        }
+        else if (data.list[0].main.temp>10){
+          setBkcolor("linear-gradient(130deg,#008dc0,#4e97d1")
+          
+        }
+        else if (data.list[0].main.temp<10){
+            setBkcolor("linear-gradient(130deg,#004f92,#008dc0)")
+          }
+   
+      })
+      
+  }
+
+  //handling search request
+  const handleSubmit = (e) => {
     e.preventDefault();
-    data().then(res=> {
-      setTemp(res.main.temp);
-      setCondition(res.weather[0].main);
-      setCountry(res.sys.country);
-    });
-  };
-  useEffect(()=>{
-    data().then(res=> {
-      setTemp(res.main.temp);
-      setCondition(res.weather[0].main);
-      setCountry(res.sys.country);
-    });
-  },[]);
-  return (
-    <div>
-    <div className="App">
-    <WeatherCard temp={temp} condition={condition} city={city} country={country}/><br></br>
+    fetchData();
     
-   <from>
-     <input 
-     id='search'
-     value={city} onChange={(e)=>setCity(e.target.value)}
-     /><br></br>
-     <button class='btn btn-full' onClick={e=>handleSearch(e )}>search</button>
-   </from>
+
+  }
+  useEffect(() => {
+    fetchData()
+    
+  }, [])
+  
+  return (
+    <div className="App " style={{background:bkcolor,color:"whitesmoke"}}>
+      <form className='Form col-12 col-md-4 pt-5 '>
+        <div className='row justify-content-center'>
+          <input type="text" className="form-input col-7 mt-3 p-2"value={city} onChange={(e)=>setCity(e.target.value)}/>
+          <button type="submit" className="btn-secondary search-btn col-6 mt-1" onClick={handleSubmit}>search</button>
+        </div>
+        
+      </form>
+    {
+      Object.keys(tmp).length>1 ? 
+        Object.keys(tmp).length>2 ? 
+            <><Main data={tmp} city={city} /> {console.log(Object.keys(tmp).length)}</>
+          :
+            <h3 style={{textAlign:"center"}}>"INVALID REQUEST"</h3>
+        : 
+          <h3 style={{textAlign:"center",color:"black"}}>LOADING!!!!</h3>
+      //console.log(tmp[0].main.temp)
+    }
+   
     </div>
-    </div>
+    
   );
 }
 

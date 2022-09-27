@@ -1,29 +1,34 @@
-.App{
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-shadow: 2px 2px 3px black;
+body{
+ 
 }
-#search{
-    border: none;
-    margin-top: 5px;
-    font-size: 30px;
-    padding-left: 10px;
-    text-align: center;
-    background-color: rgb(80, 255, 217);
-    border-radius: 25px;
-    box-shadow: 2px 2px 3px black;
+.App {
+  height: 100vh;
+  width: 100%;
+  
+
 }
-.btn-full{
-    margin-top: 5px;
-    padding: 5px;
-    background-color: rgb(252, 101, 101);
-    font-size: 20px;
-    border-radius: 5px;
-    border: none;
-   
+@media only screen and (max-width: 768px) {
+  .App {
+    height: 100%;
+    width: 100%;
+  }
 }
-.btn-full:hover{
-    background-color: rgb(252, 54, 54);
+.form-input{
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 0px 1px gray;
+}
+.search-btn{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px maroon;
+  background-color: brown;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-graph{
+    overflow-x: auto;
+  }
 }
