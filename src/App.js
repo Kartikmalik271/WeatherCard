@@ -6,7 +6,6 @@ function App() {
   //declaration of states
   const [city,setCity]=useState("mohali")
   const [tmp,setTmp]=useState([])
-
   
   const [bkcolor,setBkcolor]=useState("linear-gradient(130deg,#ffffff,#ffffff)")
 
@@ -18,7 +17,6 @@ function App() {
       })
       .then(data => {
         setTmp(data)
-        console.log(data)
         if (data.list[0].main.temp>40){
           setBkcolor("linear-gradient(130deg,#ed7117, #ed7014)")
         }
@@ -26,27 +24,21 @@ function App() {
           setBkcolor("linear-gradient(130deg,#ff781f,#ffba49)")
         }
         else if (data.list[0].main.temp>10){
-          setBkcolor("linear-gradient(130deg,#008dc0,#4e97d1")
-          
+          setBkcolor("linear-gradient(130deg,#008dc0,#4e97d1")          
         }
         else if (data.list[0].main.temp<10){
             setBkcolor("linear-gradient(130deg,#004f92,#008dc0)")
           }
-   
-      })
-      
+      })  
   }
 
   //handling search request
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchData();
-    
-
   }
   useEffect(() => {
-    fetchData()
-    
+    fetchData()    
   }, [])
   
   return (
@@ -61,14 +53,12 @@ function App() {
     {
       Object.keys(tmp).length>1 ? 
         Object.keys(tmp).length>2 ? 
-            <><Main data={tmp} city={city} /> {console.log(Object.keys(tmp).length)}</>
+            <><Main data={tmp} city={city} /></>
           :
             <h3 style={{textAlign:"center"}}>"INVALID REQUEST"</h3>
         : 
           <h3 style={{textAlign:"center",color:"black"}}>LOADING!!!!</h3>
-      //console.log(tmp[0].main.temp)
     }
-   
     </div>
     
   );

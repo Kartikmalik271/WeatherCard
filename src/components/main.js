@@ -105,22 +105,22 @@ const Main = (props) => {
                   <div className='row '>
                       <div className='col-12 col-md-6 ml-4'>
                           <h1 className='col-12 col-md-11 mb-1' style={{alignContent:"center"}}>{(props.data.list[0].main.temp)} ℃</h1>
-                          {console.log(props.data.list[0])}
                           <h4 className='col-11 mb-3'>{(props.data.list[0].weather[0].description)}</h4>
                           <h5 className='col-11 '>feels like: {(props.data.list[0].main.feels_like)} ℃</h5>
                       </div>
                       <img className='col-12 col-md-4 p-0' src={icon}/>
                       <div className='row ml-4 mt-4'>
-                          <p className='col-5 mb-0' >temp min {(props.data.list[0].main.temp_min)} ℃</p>
-                          <p className='col-5 mb-0' ><i className="fa fa-wind "/> wind {(props.data.list[0].wind.speed)} m/s</p>
-                          <p className='col-5 mb-0' >temp max {(props.data.list[0].main.temp_max)} ℃</p>
-                          <p className='col-5 mb-0' ><i className='fa-droplet'/> humidity {(props.data.list[0].main.feels_like)} ℃</p>
-                          <p className='col-5 mb-0' >visibility {(props.data.list[0].main.feels_like)} ℃</p>  
+                          <p className='col-5 mb-0' >temp min: {(props.data.list[0].main.temp_min)} ℃</p>
+                          <p className='col-5 mb-0' ><i className="fa fa-wind "/> wind: {(props.data.list[0].wind.speed)} m/s</p>
+                          <p className='col-5 mb-0' >temp max: {(props.data.list[0].main.temp_max)} ℃</p>
+                          <p className='col-5 mb-0' ><i className='fa-droplet'/> humidity: {(props.data.list[0].main.feels_like)} %</p>
+                          <p className='col-5 mb-0' >visibility: {(props.data.list[0].main.feels_like)} </p>  
                       </div>
                   </div>
               </div>
               <div className=' main-graph col-12 col-md-6 '>
                 <Graphs data={props.data}/>
+                <p style={{textAlign:"center", color:"wheat"}}>*temp vs date graph</p>
               </div>
             </div>
         </div>
