@@ -16,8 +16,8 @@ const Main = (props) => {
     const date = new Date();
     let icon=''
     let day = date.getDate();
-    let month = date.getMonth() + 1;
-    console.log(month);
+    let month = date.getMonth() ;
+  
     let mth=''
     switch(month) {
         case 0:
