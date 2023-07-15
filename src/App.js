@@ -3,8 +3,11 @@ import './App.css';
 import Main from './components/main';
 
 function App() {
-  //declaration of states
-  const [city,setCity]=useState("mohali")
+  const hello = () =>{
+    console.log('hello')
+  }
+  //declaration of states hehwhfejfhejhejhvejfh3f
+  const [city,setCity]=useState("delhi")
   const [tmp,setTmp]=useState([])
   
   const [bkcolor,setBkcolor]=useState("linear-gradient(130deg,#ffffff,#ffffff)")
@@ -38,6 +41,7 @@ function App() {
     fetchData();
   }
   useEffect(() => {
+
     fetchData()    
   }, [])
   
