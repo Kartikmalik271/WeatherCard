@@ -6,8 +6,8 @@ function App() {
   const hello = () =>{
     console.log('hello')
   }
-  //declaration of states hehwhfejfhejhejhvejfh3f
-  const [city,setCity]=useState("delhi")
+  //declaration of states 
+  const [city,setCity]=useState("India")
   const [tmp,setTmp]=useState([])
   
   const [bkcolor,setBkcolor]=useState("linear-gradient(130deg,#ffffff,#ffffff)")
